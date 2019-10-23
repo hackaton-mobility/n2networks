@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Networkd3</title>
+<script type="text/javascript" src="d3.v3.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="application/json" id="ETA"> {
+    "links": [
+        {
+            "edge_weight": 6.694389668857352,
+            "edge_width": 7.762585113968155,
+            "source": 0,
+            "source_label": "uur op de dag_00:00 - 00:59",
+            "target": 46,
+            "target_label": "Intensiteit_low_250.9",
+            "weight": 6.694389668857352
+        },
+        {
+            "edge_weight": 13.650026374094379,
+            "edge_width": 14.789078576072704,
+            "source": 1,
+            "source_label": "uur op de dag_01:00 - 01:59",
+            "target": 47,
+            "target_label": "Intensiteit_low_112.6",
+            "weight": 13.650026374094379
+        },
+        {
+            "edge_weight": 18.30396212436369,
+            "edge_width": 19.490423759569833,
+            "source": 25,
+            "source_label": "uur op de dag_02:00 - 02:59",
+            "target": 48,
+            "target_label": "Intensiteit_low_78.4",
+            "weight": 18.30396212436369
+        },
+        {
+            "edge_weight": 18.808399682182344,
+            "edge_width": 20.0,
+            "source": 34,
+            "source_label": "uur op de dag_03:00 - 03:59",
+            "target": 50,
+            "target_label": "Intensiteit_low_86.8",
+            "weight": 18.808399682182344
+        },
+        {
+            "edge_weight": 15.452981812234723,
+            "edge_width": 16.610400639805654,
+            "source": 43,
+            "source_label": "uur op de dag_04:00 - 04:59",
+            "target": 51,
+            "target_label": "Intensiteit_low_117.0",
+            "weight": 15.452981812234723
+        },
+        {
+            "edge_weight": 6.649512438551939,
+            "edge_width": 7.717250721345129,
+            "source": 49,
+            "source_label": "uur op de dag_05:00 - 05:59",
+            "target": 52,
+            "target_label": "Intensiteit_low_341.9",
+            "weight": 6.649512438551939
+        },
+        {
+            "edge_weight": 2.029963821434091,
+            "edge_width": 3.0506429711712997,
+            "source": 54,
+            "source_label": "uur op de dag_07:00 - 07:59",
+            "target": 55,
+            "target_label": "Intensiteit_high_3195.7",
+            "weight": 2.029963821434091
+        },
+        {
+            "edge_weight": 1.5910540520166936,
+            "edge_width": 2.6072620477623527,
+            "source": 54,
+            "source_label": "uur op de dag_07:00 - 07:59",
+            "target": 56,
+            "target_label": "Gemiddelde snelheid_low_90.5",
+            "weight": 1.5910540520166936
+        },
+        {
+            "edge_weight": 2.4246285507614136,
+            "edge_width": 3.449328132265721,
+            "source": 30,
+            "source_label": "lus_0020vwm1587ra",
+            "target": 56,
+            "target_label": "Gemiddelde snelheid_low_90.5",
+            "weight": 2.4246285507614136
+        },
+        {
+            "edge_weight": 4.147786818382667,
+            "edge_width": 5.190040135308661,
+            "source": 59,
+            "source_label": "uur op de dag_08:00 - 08:59",
+            "target": 57,
+            "target_label": "Intensiteit_high_3163.8",
+            "weight": 4.147786818382667
+        },
+        {
+            "edge_weight": 3.3741252456861908,
+            "edge_width": 4.408497307124383,
+            "source": 59,
+            "source_label": "uur op de dag_08:00 - 08:59",
+            "target": 58,
+            "target_label": "Gemiddelde snelheid_low_87.5",
+            "weight": 3.3741252456861908
+        },
+        {
+            "edge_weight": 1.4763455438805184,
+            "edge_width": 2.49138500923621,
+            "source": 61,
+            "source_label": "uur op de dag_09:00 - 09:59",
+            "target": 60,
+            "target_label": "Intensiteit_high_2225.5",
+            "weight": 1.4763455438805184
+        },
+        {
+            "edge_weight": 1.5365636272738843,
+            "edge_width": 2.5522165315245116,
+            "source": 6,
+            "source_label": "uur op de dag_12:00 - 12:59",
+            "target": 62,
+            "target_label": "Intensiteit_high_1950.0",
+            "weight": 1.5365636272738843
+        },
+        {
+            "edge_weight": 2.572913675284962,
+            "edge_width": 3.599123830653417,
+            "source": 10,
+            "source_label": "uur op de dag_13:00 - 13:59",
+            "target": 2,
+            "target_label": "Intensiteit_high_2278.7",
+            "weight": 2.572913675284962
+        },
+        {
+            "edge_weight": 3.606129049673119,
+            "edge_width": 4.642864523380826,
+            "source": 12,
+            "source_label": "uur op de dag_14:00 - 14:59",
+            "target": 3,
+            "target_label": "Intensiteit_high_2370.4",
+            "weight": 3.606129049673119
+        },
+        {
+            "edge_weight": 4.432543645567715,
+            "edge_width": 5.477697767427213,
+            "source": 13,
+            "source_label": "uur op de dag_15:00 - 15:59",
+            "target": 4,
+            "target_label": "Intensiteit_high_2431.8",
+            "weight": 4.432543645567715
+        },
+        {
+            "edge_weight": 6.915689918603343,
+            "edge_width": 7.986139739360184,
+            "source": 15,
+            "source_label": "uur op de dag_16:00 - 16:59",
+            "target": 5,
+            "target_label": "Intensiteit_high_2982.5",
+            "weight": 6.915689918603343
+        },
+        {
+            "edge_weight": 8.098465087048075,
+            "edge_width": 9.18096378500926,
+            "source": 19,
+            "source_label": "uur op de dag_17:00 - 17:59",
+            "target": 7,
+            "target_label": "Intensiteit_high_3369.5",
+            "weight": 8.098465087048075
+        },
+        {
+            "edge_weight": 2.420914445710982,
+            "edge_width": 3.4455761917949403,
+            "source": 19,
+            "source_label": "uur op de dag_17:00 - 17:59",
+            "target": 8,
+            "target_label": "Gemiddelde snelheid_low_87.0",
+            "weight": 2.420914445710982
+        },
+        {
+            "edge_weight": 2.128172726618502,
+            "edge_width": 3.149852326035844,
+            "source": 23,
+            "source_label": "uur op de dag_18:00 - 18:59",
+            "target": 9,
+            "target_label": "Intensiteit_high_2174.2",
+            "weight": 2.128172726618502
+        },
+        {
+            "edge_weight": 2.981468612930032,
+            "edge_width": 4.011840698990173,
+            "source": 24,
+            "source_label": "uur op de dag_19:00 - 19:59",
+            "target": 11,
+            "target_label": "Gemiddelde snelheid_high_94.5",
+            "weight": 2.981468612930032
+        },
+        {
+            "edge_weight": 1.5648087788542846,
+            "edge_width": 2.5807494151879737,
+            "source": 26,
+            "source_label": "uur op de dag_20:00 - 20:59",
+            "target": 11,
+            "target_label": "Gemiddelde snelheid_high_94.5",
+            "weight": 1.5648087788542846
+        },
+        {
+            "edge_weight": 1.415006533191508,
+            "edge_width": 2.4294211408165465,
+            "source": 27,
+            "source_label": "uur op de dag_23:00 - 23:59",
+            "target": 14,
+            "target_label": "Intensiteit_low_538.8",
+            "weight": 1.415006533191508
+        },
+        {
+            "edge_weight": 11.934541740485608,
+            "edge_width": 13.056118378005246,
+            "source": 41,
+            "source_label": "dag van de week_di",
+            "target": 28,
+            "target_label": "lus_0020vwm1572ra",
+            "weight": 11.934541740485608
+        },
+        {
+            "edge_weight": 11.387602916362994,
+            "edge_width": 12.503607912791445,
+            "source": 41,
+            "source_label": "dag van de week_di",
+            "target": 29,
+            "target_label": "lus_0020vwm1583ra",
+            "weight": 11.387602916362994
+        },
+        {
+            "edge_weight": 11.387602916362994,
+            "edge_width": 12.503607912791445,
+            "source": 41,
+            "source_label": "dag van de week_di",
+            "target": 30,
+            "target_label": "lus_0020vwm1587ra",
+            "weight": 11.387602916362994
+        },
+        {
+            "edge_weight": 11.387602916362994,
+            "edge_width": 12.503607912791445,
+            "source": 41,
+            "source_label": "dag van de week_di",
+            "target": 31,
+            "target_label": "lus_0020vwm1591ra",
+            "weight": 11.387602916362994
+        },
+        {
+            "edge_weight": 11.387602916362994,
+            "edge_width": 12.503607912791445,
+            "source": 41,
+            "source_label": "dag van de week_di",
+            "target": 32,
+            "target_label": "lus_0020vwm1596ra",
+            "weight": 11.387602916362994
+        },
+        {
+            "edge_weight": 11.387602916362994,
+            "edge_width": 12.503607912791445,
+            "source": 41,
+            "source_label": "dag van de week_di",
+            "target": 33,
+            "target_label": "lus_0020vwm1596rb",
+            "weight": 11.387602916362994
+        },
+        {
+            "edge_weight": 2.4365867166400688,
+            "edge_width": 3.461408115439924,
+            "source": 33,
+            "source_label": "lus_0020vwm1596rb",
+            "target": 16,
+            "target_label": "Intensiteit_low_358.3",
+            "weight": 2.4365867166400688
+        },
+        {
+            "edge_weight": 1.9969015471722853,
+            "edge_width": 3.01724389301531,
+            "source": 33,
+            "source_label": "lus_0020vwm1596rb",
+            "target": 17,
+            "target_label": "Gemiddelde snelheid_low_90.0",
+            "weight": 1.9969015471722853
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 42,
+            "source_label": "dag van de week_ma",
+            "target": 35,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1572ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 35,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1572ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 7.79634095356393,
+            "edge_width": 8.875761926626978,
+            "source": 35,
+            "source_label": "lus_RWS01_MONIBAS_0020vwm1572ra",
+            "target": 18,
+            "target_label": "Gemiddelde snelheid_high_96.0",
+            "weight": 7.79634095356393
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 42,
+            "source_label": "dag van de week_ma",
+            "target": 36,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1583ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 42,
+            "source_label": "dag van de week_ma",
+            "target": 37,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1587ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 42,
+            "source_label": "dag van de week_ma",
+            "target": 38,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1591ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 42,
+            "source_label": "dag van de week_ma",
+            "target": 39,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1596ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 42,
+            "source_label": "dag van de week_ma",
+            "target": 40,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1596rb",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 36,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1583ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 37,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1587ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 38,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1591ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 39,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1596ra",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 5.783279267127634,
+            "edge_width": 6.842193271739076,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 40,
+            "target_label": "lus_RWS01_MONIBAS_0020vwm1596rb",
+            "weight": 5.783279267127634
+        },
+        {
+            "edge_weight": 13.623195179283114,
+            "edge_width": 14.761974053092104,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 53,
+            "target_label": "Gemiddelde snelheid_high_94.0",
+            "weight": 13.623195179283114
+        },
+        {
+            "edge_weight": 4.053238007480607,
+            "edge_width": 5.094528159941562,
+            "source": 45,
+            "source_label": "dag van de week_zo",
+            "target": 22,
+            "target_label": "Intensiteit_low_620.6",
+            "weight": 4.053238007480607
+        },
+        {
+            "edge_weight": 9.650980447037488,
+            "edge_width": 10.749294548829791,
+            "source": 36,
+            "source_label": "lus_RWS01_MONIBAS_0020vwm1583ra",
+            "target": 18,
+            "target_label": "Gemiddelde snelheid_high_96.0",
+            "weight": 9.650980447037488
+        },
+        {
+            "edge_weight": 5.760341187200039,
+            "edge_width": 6.819021522627578,
+            "source": 40,
+            "source_label": "lus_RWS01_MONIBAS_0020vwm1596rb",
+            "target": 20,
+            "target_label": "Intensiteit_low_383.4",
+            "weight": 5.760341187200039
+        },
+        {
+            "edge_weight": 2.9894949387899836,
+            "edge_width": 4.019948788669039,
+            "source": 40,
+            "source_label": "lus_RWS01_MONIBAS_0020vwm1596rb",
+            "target": 21,
+            "target_label": "Gemiddelde snelheid_low_91.0",
+            "weight": 2.9894949387899836
+        },
+        {
+            "edge_weight": 7.506972783661585,
+            "edge_width": 8.583445976251204,
+            "source": 44,
+            "source_label": "dag van de week_za",
+            "target": 53,
+            "target_label": "Gemiddelde snelheid_high_94.0",
+            "weight": 7.506972783661585
+        }
+    ],
+    "nodes": [
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_00:00 - 00:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_01:00 - 01:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_2278.7",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_2370.4",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_2431.8",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_2982.5",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_12:00 - 12:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_3369.5",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_low_87.0",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_2174.2",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_13:00 - 13:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_high_94.5",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_14:00 - 14:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_15:00 - 15:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_538.8",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_16:00 - 16:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_358.3",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_low_90.0",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_high_96.0",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_17:00 - 17:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_383.4",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_low_91.0",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_620.6",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_18:00 - 18:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_19:00 - 19:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_02:00 - 02:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_20:00 - 20:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_23:00 - 23:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_0020vwm1572ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_0020vwm1583ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_0020vwm1587ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_0020vwm1591ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_0020vwm1596ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_0020vwm1596rb",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_03:00 - 03:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_RWS01_MONIBAS_0020vwm1572ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_RWS01_MONIBAS_0020vwm1583ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_RWS01_MONIBAS_0020vwm1587ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_RWS01_MONIBAS_0020vwm1591ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_RWS01_MONIBAS_0020vwm1596ra",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#33a02c",
+            "node_color_edge": "#000000",
+            "node_name": "lus_RWS01_MONIBAS_0020vwm1596rb",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#b2df8a",
+            "node_color_edge": "#000000",
+            "node_name": "dag van de week_di",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#b2df8a",
+            "node_color_edge": "#000000",
+            "node_name": "dag van de week_ma",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_04:00 - 04:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#b2df8a",
+            "node_color_edge": "#000000",
+            "node_name": "dag van de week_za",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#b2df8a",
+            "node_color_edge": "#000000",
+            "node_name": "dag van de week_zo",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_250.9",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_112.6",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_78.4",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_05:00 - 05:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_86.8",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_117.0",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_low_341.9",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_high_94.0",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_07:00 - 07:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_3195.7",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_low_90.5",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_3163.8",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#a6cee3",
+            "node_color_edge": "#000000",
+            "node_name": "Gemiddelde snelheid_low_87.5",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_08:00 - 08:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_2225.5",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#fb9a99",
+            "node_color_edge": "#000000",
+            "node_name": "uur op de dag_09:00 - 09:59",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        },
+        {
+            "node_color": "#1f78b4",
+            "node_color_edge": "#000000",
+            "node_name": "Intensiteit_high_1950.0",
+            "node_size": "10",
+            "node_size_edge": "0.10000000000000009"
+        }
+    ]
+}
+</script>
+<form>
+<h3> Link threshold 0 <input type="range" id="thersholdSlider" name="points" value=0.0 min="0.0" max="19.0" onchange="threshold(this.value)"> 19.0 </h3>
+</form>
+<script  src="ETAscript.js"></script>
+</body>
+</html>
